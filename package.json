@@ -1,0 +1,17 @@
+{
+  "name": "input-packer",
+  "version": "0.0.1",
+  "description": "An input packer for Vue.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "input",
+    "packer",
+    "input",
+    "reader"
+  ],
+  "author": "André Moraes",
+  "license": "ISC"
+}
