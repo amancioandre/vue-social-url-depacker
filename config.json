@@ -1,0 +1,56 @@
+{
+  "rules": {
+    "instagram": [
+      {
+        "type": "feed",
+        "url": "p",
+        "labels": ["shortcode"],
+        "items": ["type", "shortcode"]
+      },
+      {
+        "type": "stories",
+        "url": "stories",
+        "labels": ["username"],
+        "items": ["username"]
+      }
+    ],
+    "youtube": [
+      {
+        "type": "video",
+        "url": "v",
+        "labels": ["shortcode"],
+        "items": ["type", "shortcode"]
+      },
+      {
+        "type": "post",
+        "url": "post",
+        "labels": ["shortcode"],
+        "items": ["type", "shortcode"]
+      }
+    ],
+    "twitter": [
+      {
+        "type": "status",
+        "url": "status",
+        "labels": ["shortcode"],
+        "items": ["username", "type", "shortcode"]
+      }
+    ],
+    "tiktok": [
+      {
+        "type": "video",
+        "url": "video",
+        "labels": ["shortcode"],
+        "items": ["username", "type", "shortcode"]
+      }
+    ],
+    "twitch": [
+      {
+        "type": "video",
+        "url": "tv",
+        "labels": ["username"],
+        "items": ["type", "username"]
+      }
+    ]
+  }
+}

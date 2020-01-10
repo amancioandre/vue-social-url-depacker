@@ -13,5 +13,6 @@
     "reader"
   ],
   "author": "André Moraes",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {}
 }
