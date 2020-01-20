@@ -12,6 +12,12 @@
         "url": "stories",
         "labels": ["username"],
         "items": ["username"]
+      },
+      {
+        "type": "stories highlights",
+        "url": "highlights",
+        "labels": [],
+        "items": ["highlights", "shortcode"]
       }
     ],
     "youtube": [

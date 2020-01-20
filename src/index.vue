@@ -1,17 +1,10 @@
 <template>
   <div>
-    <input class="" type="text" v-model="input" @keypress.enter="depackURL" />
-    {{ this.data }}
-    {{ this.input }}
-    {{ this.items }}
+    {{ this.log }}
     <div class="tags-container">
-      <tag
-        v-for="(tag, idx) in tags"
-        :key="`tag-${idx}`"
-        :label="tag[0]"
-        :value="tag[1]"
-      />
+      <tag v-for="(tag, idx) in tags" :key="`tag-${idx}`" :label="tag[0]" :value="tag[1]" />
     </div>
+    <input class type="text" v-model="input" @keypress.enter="depackURL" />
   </div>
 </template>
 
@@ -32,7 +25,8 @@ export default {
       labels: [],
       data: {},
       tags: null,
-      items: null
+      items: null,
+      log: null
     };
   },
 
@@ -44,10 +38,17 @@ export default {
     //       this.toNextLabel();
     //     },
     depackURL() {
-      const [provider, ...items] = this.input.match(
-        /(\b(?!http|www|com|watch))([\w-]+)/gm
+      const [url, ...items] = this.input.match(
+        /(\b(?!http|www|watch|\.com))([\w-]+(?:\.[\w-]{2,})?)/gm
       );
 
+      const [provider] = url.match(/(\b(?!http|www|\.com))([\w-]*)/gm);
+
+      this.log = {
+        url,
+        items,
+        provider
+      };
       const attributes = items.reduce((acc, item) => {
         rules[provider].forEach(rule => {
           if (Object.values(rule).indexOf(item) > -1) {
