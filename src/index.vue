@@ -1,10 +1,9 @@
 <template>
   <div>
-    {{ this.log }}
     <div class="tags-container">
       <tag v-for="(tag, idx) in tags" :key="`tag-${idx}`" :label="tag[0]" :value="tag[1]" />
+      <input type="text" v-model="input" @keypress.enter="depackURL" />
     </div>
-    <input class type="text" v-model="input" @keypress.enter="depackURL" />
   </div>
 </template>
 
@@ -101,6 +100,19 @@ export default {
 <style>
 .tags-container {
   margin: 10px;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 5px;
   display: flex;
+  justify-content: flex-start;
+}
+
+.tags-container input {
+  flex: 1;
+  font-size: 16px;
+  padding: 5px;
+  outline: none;
+  border: none;
 }
 </style>

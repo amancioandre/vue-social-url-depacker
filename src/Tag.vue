@@ -1,14 +1,9 @@
 <template>
   <div class="tag">
-    <span class="label">
-      <small>{{ label }}</small>
-    </span>
-    <div class="value">
-      {{ value }}
+    <div class="label-header">
+      <small class="label">{{ label }}</small>
     </div>
-    <div class="close">
-      x
-    </div>
+    <div class="value">{{ value }}</div>
   </div>
 </template>
 
@@ -35,7 +30,6 @@ export default {
 
 <style>
 .tag {
-  position: relative;
   height: 40px;
   padding: 5px 10px;
   margin: 5px;
@@ -44,6 +38,12 @@ export default {
   background-color: #f0f4f7;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.label-header {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .label {
@@ -60,9 +60,7 @@ export default {
 }
 
 .close {
-  position: absolute;
-  top: 2px;
-  right: 12px;
+  margin-left: auto;
   font-size: 12px;
   font-family: Helvitica;
 }
