@@ -9,7 +9,7 @@
 
 <script>
 import { rules } from "../config.json";
-import Tag from "./Tag";
+import Tag from "./components/Tag";
 
 export default {
   components: {
